@@ -1,0 +1,359 @@
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the height of sections to 100vh (viewport height) */
+body,
+html,
+.hero,
+.about,
+.services,
+.contact-address {
+    height: 100vh;
+}
+
+/* Ensure the background images cover the entire section */
+.hero,
+.about,
+.services,
+.contact-address {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add some spacing between sections */
+.hero,
+.about,
+.services,
+.contact-address {
+    padding: 50px 0;
+}
+
+/* Center text and make it white */
+.hero,
+.about,
+.services,
+.contact-address {
+    text-align: center;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* navbar start */
+
+header {
+    background-color: #020A24;
+    color: white;
+    padding: 40px;
+}
+
+nav img.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ffc800;
+}
+
+/* navbar end */
+
+/* Dropdown menu start */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #020A24;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown .dropdown-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: block;
+}
+
+.dropdown .dropdown-menu li a:hover {
+    color: #ffc800;
+}
+
+/* Dropdown menu end */
+
+/* home section start */
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-image: url('img/home.jpg');
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* home section end */
+
+/* about us section start */
+
+.about {
+    padding: 20px;
+    background-color: #020A24;
+}
+
+.about-content {
+    text-align: center;
+    padding: 20px 100px;
+}
+
+.about-description p,
+.about-mission p,
+.about-team p {
+    margin: 20px 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-content h2 {
+    color: white;
+    font-size: 3rem;
+}
+
+.about-mission h3,
+.about-team h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ffc800;
+    /* Yellow color for headings */
+}
+
+/* Adjust the spacing between sections */
+.about-mission,
+.about-team {
+    margin-top: 40px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+    .about-description p,
+    .about-mission p,
+    .about-team p {
+        font-size: 1rem;
+    }
+
+    .about-mission h3,
+    .about-team h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* about us section end */
+
+/* services section start */
+
+#services {
+    padding: 0px 0;
+    background-color: #020A24;
+}
+
+.services h2 {
+    font-size: 3rem;
+}
+
+.services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.service-block {
+    max-width: 230px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.service-block:after {
+    height: 100%;
+    width: 100%;
+    background: rgb(47, 47, 47);
+    background: linear-gradient(360deg,
+            rgba(47, 47, 47, 1) 0%,
+            rgba(47, 47, 47, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    opacity: 1;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.service-block:hover:after {
+    background: linear-gradient(360deg,
+            rgba(47, 47, 47, 0.8) 0%,
+            rgba(47, 47, 47, 0.8) 50%,
+            rgba(47, 47, 47, 0.8) 100%);
+}
+
+.service-image {
+    width: 256px;
+    height: 256px;
+    -webkit-transition: -webkit-transform 0.5s ease;
+}
+
+.service-block:hover .service-image {
+    -webkit-transform: scale(1.1);
+}
+
+.service-details {
+    position: absolute;
+    padding-left: 2em;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.service-block:hover .service-details {
+    top: 50%;
+}
+
+.service-details h4 {
+    color: rgba(255, 255, 255, 1);
+}
+
+.service-block:hover .service-details h4 {
+    color: rgba(253, 223, 0, 1);
+}
+
+.service-block .fadeIn-bottom {
+    top: 80%;
+}
+
+/* services section end */
+
+/* contact us section start */
+
+.contact-address {
+    display: flex;
+    background-color: #020A24;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact {
+    flex: 1;
+    padding: 50px;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#location-map {
+    padding: 30px;
+}
+
+/* contact us section end */
+
+/* footer section start */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* footer section end */
