@@ -206,6 +206,76 @@ nav ul li a:hover {
 
 /* about us section end */
 
+/* clients section start */
+
+#clients {
+    padding: 50px 0;
+    background-color: #020A24;
+    text-align: center;
+    color: white;
+}
+
+.clients h2 {
+    font-size: 3rem;
+}
+
+.clients-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.client-block {
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+    margin: 10px 190px;
+}
+
+.client-block:after {
+    height: 100%;
+    width: 100%;
+    background: rgb(47, 47, 47);
+    background: linear-gradient(360deg,
+            rgba(47, 47, 47, 1) 0%,
+            rgba(47, 47, 47, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    opacity: 1;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.client-block:hover:after {
+    background: linear-gradient(360deg,
+            rgba(47, 47, 47, 0.8) 0%,
+            rgba(47, 47, 47, 0.8) 50%,
+            rgba(47, 47, 47, 0.8) 100%);
+}
+
+.client-image {
+    width: 256px;
+    height: 256px;
+    -webkit-transition: -webkit-transform 0.5s ease;
+}
+
+.client-block:hover .client-image {
+    -webkit-transform: scale(1.1);
+}
+
+/* clients section end */
+
 /* services section start */
 
 #services {
