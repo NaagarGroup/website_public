@@ -427,3 +427,73 @@ footer {
 }
 
 /* footer section end */
+
+/* Common styles for all screen sizes */
+/* ... Your existing styles ... */
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+
+    /* Header navigation adjustments */
+    header {
+        text-align: center;
+    }
+
+    .logo {
+        width: 80%;
+        /* Adjust the logo size for smaller screens */
+        margin: 20px auto;
+        /* Center the logo */
+    }
+
+    ul {
+        flex-direction: column;
+        /* Stack navigation items vertically on small screens */
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 10px 0;
+        /* Add space between navigation items */
+    }
+
+    /* Content adjustments */
+    h2 {
+        font-size: 2rem;
+        /* Decrease heading font size */
+    }
+
+    p {
+        font-size: 1rem;
+        /* Decrease paragraph font size */
+        margin: 20px 0;
+        /* Add space between paragraphs */
+    }
+
+    /* Adjustments for specific sections */
+    .managed-it-services {
+        padding: 50px 0;
+        /* Reduce padding for this section */
+    }
+
+    /* ... Add more specific adjustments as needed ... */
+
+    .our-clients {
+        padding-top: 30px;
+        /* Add padding to separate from the section above */
+    }
+
+    .our-team,
+    .our-mission {
+        margin-top: 20px;
+        /* Add margin to separate from the previous section */
+    }
+
+    /* New adjustments to prevent content overlapping in "About Us" section */
+    #about {
+        padding-bottom: 20px;
+        /* Add padding to push content up and prevent overlapping */
+    }
+}
